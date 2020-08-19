@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="返工嘅第二日。 去咗福田上梅林嘅vivo，熟悉咗一下环境，搭车过去好麻烦，好在系清湖搭嘅地铁，好彩。 导师非常好人，工位好正，感觉系度返工好舒服，积极向上嘅感觉，都系大神！！！ 初步了解openresty，lua，安排咗要解决ner内存泄露同埋redis去重嘅问题。 首要目标先搞明白openresty系咩，理解nginx、uwsgi！ 加油！！！ 晚黑翻来嘅时候搭岩车，但系自己走咗落来，哎，无语！">
+  <meta name="description" content="基本上系稳到完成需求嘅方法了，但系一d细节嘅地方同埋大体运行嘅框架需要再确定d。虽然睇起身好小哩个需求，但系做起身其实都比较花时间，一个系要熟悉grafana，再一个系要知道佢日志嘅采集，服务有咩，算法有咩，接口点样调用，咁样先比较好咁去完成任务，咩都唔识，好惨嘅！加油啦，人地都系咁挨过来嘅，你肯定顶得住！听日要尽可能完成啦，咁样先有时间去展开自己嘅学习！唔知道导师点样评价我，但系我觉得自己好垃圾">
 <meta property="og:type" content="article">
-<meta property="og:title" content="打工日记(2)">
-<meta property="og:url" content="http://yoursite.com/2020/08/11/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-2/index.html">
+<meta property="og:title" content="打工日记(9)">
+<meta property="og:url" content="http://yoursite.com/2020/08/19/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-9/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="返工嘅第二日。 去咗福田上梅林嘅vivo，熟悉咗一下环境，搭车过去好麻烦，好在系清湖搭嘅地铁，好彩。 导师非常好人，工位好正，感觉系度返工好舒服，积极向上嘅感觉，都系大神！！！ 初步了解openresty，lua，安排咗要解决ner内存泄露同埋redis去重嘅问题。 首要目标先搞明白openresty系咩，理解nginx、uwsgi！ 加油！！！ 晚黑翻来嘅时候搭岩车，但系自己走咗落来，哎，无语！">
+<meta property="og:description" content="基本上系稳到完成需求嘅方法了，但系一d细节嘅地方同埋大体运行嘅框架需要再确定d。虽然睇起身好小哩个需求，但系做起身其实都比较花时间，一个系要熟悉grafana，再一个系要知道佢日志嘅采集，服务有咩，算法有咩，接口点样调用，咁样先比较好咁去完成任务，咩都唔识，好惨嘅！加油啦，人地都系咁挨过来嘅，你肯定顶得住！听日要尽可能完成啦，咁样先有时间去展开自己嘅学习！唔知道导师点样评价我，但系我觉得自己好垃圾">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-08-11T13:47:42.000Z">
-<meta property="article:modified_time" content="2020-08-11T13:53:10.678Z">
+<meta property="article:published_time" content="2020-08-19T15:02:23.000Z">
+<meta property="article:modified_time" content="2020-08-19T15:07:02.793Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/08/11/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-2/">
+<link rel="canonical" href="http://yoursite.com/2020/08/19/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-9/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>打工日记(2) | Hexo</title>
+  <title>打工日记(9) | Hexo</title>
   
 
 
@@ -150,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/11/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/19/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -163,7 +163,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          打工日记(2)
+          打工日记(9)
         </h1>
 
         <div class="post-meta">
@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-08-11 21:47:42 / Modified: 21:53:10" itemprop="dateCreated datePublished" datetime="2020-08-11T21:47:42+08:00">2020-08-11</time>
+              <time title="Created: 2020-08-19 23:02:23 / Modified: 23:07:02" itemprop="dateCreated datePublished" datetime="2020-08-19T23:02:23+08:00">2020-08-19</time>
             </span>
 
           
@@ -188,15 +188,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>返工嘅第二日。</p>
-<p>去咗福田上梅林嘅vivo，熟悉咗一下环境，搭车过去好麻烦，好在系清湖搭嘅地铁，好彩。</p>
-<p>导师非常好人，工位好正，感觉系度返工好舒服，积极向上嘅感觉，都系大神！！！</p>
-<p>初步了解openresty，lua，安排咗要解决ner内存泄露同埋redis去重嘅问题。</p>
-<p>首要目标先搞明白openresty系咩，理解nginx、uwsgi！</p>
-<p>加油！！！</p>
-<p>晚黑翻来嘅时候搭岩车，但系自己走咗落来，哎，无语！！～</p>
-<p>加油！！！</p>
-<p>Fighting!!!!</p>
+        <p>基本上系稳到完成需求嘅方法了，但系一d细节嘅地方同埋大体运行嘅框架需要再确定d。虽然睇起身好小哩个需求，但系做起身其实都比较花时间，一个系要熟悉grafana，再一个系要知道佢日志嘅采集，服务有咩，算法有咩，接口点样调用，咁样先比较好咁去完成任务，咩都唔识，好惨嘅！加油啦，人地都系咁挨过来嘅，你肯定顶得住！听日要尽可能完成啦，咁样先有时间去展开自己嘅学习！唔知道导师点样评价我，但系我觉得自己好垃圾，所以要再努力d先得了！！！！加油！</p>
 
     </div>
 
@@ -212,13 +204,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/08/10/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-1/" rel="prev" title="打工日记(1)">
-      <i class="fa fa-chevron-left"></i> 打工日记(1)
+    <a href="/2020/08/18/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-8/" rel="prev" title="打工日记(8)">
+      <i class="fa fa-chevron-left"></i> 打工日记(8)
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/08/12/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-3/" rel="next" title="打工日记(3)">
-      打工日记(3) <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
