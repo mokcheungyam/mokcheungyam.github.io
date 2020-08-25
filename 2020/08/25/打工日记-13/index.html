@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="前两日白做了，原来我调用接口嘅时候用嘅方式唔岩，搞到产生内存泄漏，今日验证咗其实唔系，个ner冇问题，试好多次，用唔同嘅方法，都冇内存泄漏问题。 真系要好好理解同埋应用技能，慢d冇事嘅，但系唔好做错咁多，浪费时间。 一个星期解决唔到一个问题，虽然话哩个问题已经存在咗好耐了，但系我都系想有所突破。 寻找python内存泄漏嘅工具有以下几种常见嘅，pympler、tracemalloc、objgrap">
+  <meta name="description" content="今日喺七夕，祝天下有情人终成兄妹！！ 今日完成咗可用性哩个指标嘅表示，原来系grafana佢面板就可以实现了，只系自己冇留意，睇教程唔认真，所以先浪费咗咁嘿多时间，所以都系要将官方文档仔细阅读一下，再参考网上d技术分享帖，因为冇自己嘅思考系唔得嘅，一定要由自己一步步踩坑先可以有进步，通过漫无目的嘅搜索对自己嘅耐心都有好大嘅消磨。再一个就系，唔好放弃尝试，解决哩个需求嘅过程，自己真系有想放弃嘅念头，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="打工日记(5)">
-<meta property="og:url" content="http://yoursite.com/2020/08/14/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-5/index.html">
+<meta property="og:title" content="打工日记(13)">
+<meta property="og:url" content="http://yoursite.com/2020/08/25/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-13/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前两日白做了，原来我调用接口嘅时候用嘅方式唔岩，搞到产生内存泄漏，今日验证咗其实唔系，个ner冇问题，试好多次，用唔同嘅方法，都冇内存泄漏问题。 真系要好好理解同埋应用技能，慢d冇事嘅，但系唔好做错咁多，浪费时间。 一个星期解决唔到一个问题，虽然话哩个问题已经存在咗好耐了，但系我都系想有所突破。 寻找python内存泄漏嘅工具有以下几种常见嘅，pympler、tracemalloc、objgrap">
+<meta property="og:description" content="今日喺七夕，祝天下有情人终成兄妹！！ 今日完成咗可用性哩个指标嘅表示，原来系grafana佢面板就可以实现了，只系自己冇留意，睇教程唔认真，所以先浪费咗咁嘿多时间，所以都系要将官方文档仔细阅读一下，再参考网上d技术分享帖，因为冇自己嘅思考系唔得嘅，一定要由自己一步步踩坑先可以有进步，通过漫无目的嘅搜索对自己嘅耐心都有好大嘅消磨。再一个就系，唔好放弃尝试，解决哩个需求嘅过程，自己真系有想放弃嘅念头，">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-08-14T14:47:24.000Z">
-<meta property="article:modified_time" content="2020-08-14T14:52:48.317Z">
+<meta property="article:published_time" content="2020-08-25T13:55:24.000Z">
+<meta property="article:modified_time" content="2020-08-25T14:02:24.009Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/08/14/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-5/">
+<link rel="canonical" href="http://yoursite.com/2020/08/25/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-13/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>打工日记(5) | Hexo</title>
+  <title>打工日记(13) | Hexo</title>
   
 
 
@@ -150,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/14/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-5/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/25/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-13/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -163,7 +163,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          打工日记(5)
+          打工日记(13)
         </h1>
 
         <div class="post-meta">
@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-08-14 22:47:24 / Modified: 22:52:48" itemprop="dateCreated datePublished" datetime="2020-08-14T22:47:24+08:00">2020-08-14</time>
+              <time title="Created: 2020-08-25 21:55:24 / Modified: 22:02:24" itemprop="dateCreated datePublished" datetime="2020-08-25T21:55:24+08:00">2020-08-25</time>
             </span>
 
           
@@ -188,11 +188,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>前两日白做了，原来我调用接口嘅时候用嘅方式唔岩，搞到产生内存泄漏，今日验证咗其实唔系，个ner冇问题，试好多次，用唔同嘅方法，都冇内存泄漏问题。</p>
-<p>真系要好好理解同埋应用技能，慢d冇事嘅，但系唔好做错咁多，浪费时间。</p>
-<p>一个星期解决唔到一个问题，虽然话哩个问题已经存在咗好耐了，但系我都系想有所突破。</p>
-<p>寻找python内存泄漏嘅工具有以下几种常见嘅，pympler、tracemalloc、objgraph，睇来要好好运用一下，认真搞清楚接口嘅使用，唔好再出现唔知道点用嘅情况了！</p>
-<p>加油！！！一定可以进步嘅！！！</p>
+        <p>今日喺七夕，祝天下有情人终成兄妹！！</p>
+<p>今日完成咗可用性哩个指标嘅表示，原来系grafana佢面板就可以实现了，只系自己冇留意，睇教程唔认真，所以先浪费咗咁嘿多时间，所以都系要将官方文档仔细阅读一下，再参考网上d技术分享帖，因为冇自己嘅思考系唔得嘅，一定要由自己一步步踩坑先可以有进步，通过漫无目的嘅搜索对自己嘅耐心都有好大嘅消磨。再一个就系，唔好放弃尝试，解决哩个需求嘅过程，自己真系有想放弃嘅念头，但系不断尝试，不断寻找新途径先可以有所收获。加油啦！！你一定可以嘅！！！加油！！！冲！！！得到导师嘅认同，喺我嘅收获之一！一定要不负所望！努力将自己嘅潜能逼出来！！！加油！！！冲～～～</p>
 
     </div>
 
@@ -208,13 +205,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/08/13/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-4/" rel="prev" title="打工日记(4)">
-      <i class="fa fa-chevron-left"></i> 打工日记(4)
+    <a href="/2020/08/24/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-12/" rel="prev" title="打工日记(12)">
+      <i class="fa fa-chevron-left"></i> 打工日记(12)
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/08/16/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-6/" rel="next" title="打工日记(6)">
-      打工日记(6) <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
