@@ -145,6 +145,205 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/17/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/12/17/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-12-17 21:43:20 / Modified: 21:44:36" itemprop="dateCreated datePublished" datetime="2020-12-17T21:43:20+08:00">2020-12-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Docker-概述"><a href="#Docker-概述" class="headerlink" title="Docker 概述"></a>Docker 概述</h1><h2 id="Docker为什么会出现？"><a href="#Docker为什么会出现？" class="headerlink" title="Docker为什么会出现？"></a>Docker为什么会出现？</h2><p>环境：开发环境、线上环境</p>
+<p>角色：开发同学、运维同学</p>
+<p>版本：升级、发版</p>
+<p>配置：集群部署、单点部署、重复的配置</p>
+<p>交付：简化、方便</p>
+<p>Docker思想来自于集装箱，隔离是它的核心思想。</p>
+<p>隔离机制将服务器利用到极致。</p>
+<h2 id="Docker的历史"><a href="#Docker的历史" class="headerlink" title="Docker的历史"></a>Docker的历史</h2><p>2010  <code>dotCloud</code> paas云计算技术 LXC 有关的容器技术</p>
+<p>统一简化命名 Docker</p>
+<p>最初诞生没有引起行业注意，想做<code>开源</code></p>
+<p>2013 Docker 开源 逐渐开始引起行业注意 每个月更新一个版本</p>
+<p>2014-4-9 Docker1.0发布</p>
+<p>Docker十分轻巧，与虚拟机技术相比更优。</p>
+<p>虚拟机：windows Vmware 虚拟多台电脑 笨重 也是虚拟化技术</p>
+<p>容器：docker容器技术也是虚拟化技术</p>
+<blockquote>
+<p>vm linux centos 原生镜像 </p>
+<p>docker 隔离 镜像 十分小巧 运行镜像即可 秒级启动</p>
+</blockquote>
+<p>Docker 基于Go语言</p>
+<p>官网：<a target="_blank" rel="noopener" href="https://www.docker.com/">https://www.docker.com/</a></p>
+<p>文档地址：<a target="_blank" rel="noopener" href="https://docs.docker.com/">https://docs.docker.com/</a></p>
+<p>仓库地址：<a target="_blank" rel="noopener" href="https://hub.docker.com/">https://hub.docker.com/</a></p>
+<h2 id="Docker作用"><a href="#Docker作用" class="headerlink" title="Docker作用"></a>Docker作用</h2><blockquote>
+<p>虚拟机技术</p>
+</blockquote>
+<p>虚拟机技术缺点：</p>
+<p>1.资源占用大</p>
+<p>2.冗余步骤多</p>
+<p>3.启动慢</p>
+<blockquote>
+<p>容器化技术</p>
+</blockquote>
+<p>不是模拟一个完整的操作系统</p>
+<p>两者之间的不同</p>
+<ul>
+<li>传统虚拟机，虚拟出硬件，运行完整的操作系统，并在该系统上安装和运行软件</li>
+<li>容器内应用则是直接运行在宿主机上，并无虚拟内核以及硬件</li>
+<li>容器之间相互隔离，文件独立互不影响</li>
+</ul>
+<blockquote>
+<p>DevOps 开发 运维</p>
+</blockquote>
+<p><strong>应用更快速的交付和部署</strong></p>
+<p>传统：帮助文档多，安装程序复杂</p>
+<p>Docker：打包镜像、发布测试、一键运行</p>
+<p><strong>更便捷的升级和扩容缩容</strong></p>
+<p>部署应用简单</p>
+<p>镜像即项目，扩展简单</p>
+<p><strong>简单系统运维</strong></p>
+<p>开发与测试与生成高度一致</p>
+<p><strong>更高效的计算资源利用</strong></p>
+<p>Docker是内核级别的虚拟化，可在物理机上运行很多容器，服务器性能可以极大的利用</p>
+<h1 id="Docker-安装"><a href="#Docker-安装" class="headerlink" title="Docker 安装"></a>Docker 安装</h1><h2 id="Docker的基本组成"><a href="#Docker的基本组成" class="headerlink" title="Docker的基本组成"></a>Docker的基本组成</h2><p><img src="/Users/mok/Downloads/1865616-20200420232419387-1082587992.jpg" alt="1865616-20200420232419387-1082587992"></p>
+<p><strong>镜像 image</strong></p>
+<p>模版，通过该模板可以创建容器服务，一个镜像可以创建多个容器，最终服务运行在容器当中</p>
+<p><strong>容器 container</strong></p>
+<p>Docker利用容器技术，独立运行或一组应用，有一系列启停删除基本命令，可以理解为一个简易的系统</p>
+<p><strong>仓库 repository</strong></p>
+<p>分为公有和私有仓库，存放镜像</p>
+<p>Docker Hub</p>
+<p>阿里云、腾讯云等，配置镜像加速</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p>环境确认</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 系统内核</span></span><br><span class="line">mok00@~$ uname -r</span><br><span class="line">3.10.0-1062.12.1.el7.x86_64</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 系统版本</span></span><br><span class="line">mok00@~$ cat /etc/os-release </span><br><span class="line">NAME=&quot;CentOS Linux&quot;</span><br><span class="line">VERSION=&quot;7 (Core)&quot;</span><br><span class="line">ID=&quot;centos&quot;</span><br><span class="line">ID_LIKE=&quot;rhel fedora&quot;</span><br><span class="line">VERSION_ID=&quot;7&quot;</span><br><span class="line">PRETTY_NAME=&quot;CentOS Linux 7 (Core)&quot;</span><br><span class="line">ANSI_COLOR=&quot;0;31&quot;</span><br><span class="line">CPE_NAME=&quot;cpe:/o:centos:centos:7&quot;</span><br><span class="line">HOME_URL=&quot;https://www.centos.org/&quot;</span><br><span class="line">BUG_REPORT_URL=&quot;https://bugs.centos.org/&quot;</span><br><span class="line"></span><br><span class="line">CENTOS_MANTISBT_PROJECT=&quot;CentOS-7&quot;</span><br><span class="line">CENTOS_MANTISBT_PROJECT_VERSION=&quot;7&quot;</span><br><span class="line">REDHAT_SUPPORT_PRODUCT=&quot;centos&quot;</span><br><span class="line">REDHAT_SUPPORT_PRODUCT_VERSION=&quot;7&quot;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>安装</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1.卸载旧版本</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo yum remove docker \</span></span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-engine</span><br><span class="line">                  </span><br><span class="line"><span class="meta">#</span><span class="bash"> 2.安装基本工具包</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo yum install -y yum-utils</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"><span class="meta">#</span><span class="bash"> 3.1设置docker的yum仓库 （默认国外，修改为国内）</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo yum-config-manager \</span></span><br><span class="line">    --add-repo \</span><br><span class="line">    https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">    </span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo yum-config-manager \</span></span><br><span class="line">    --add-repo \</span><br><span class="line">    https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 3.2 更新yum软件包索引</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo yum makecache fast</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 4.安装docker相关内容 docker-ce为社区版 ee为企业版</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo yum install docker-ce docker-ce-cli containerd.io</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 5.启动docker</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo systemctl start docker</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 6.检查是否安装成功</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo docker version</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 7.检查是否可用</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo docker run hello-world</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 8.查看镜像</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo docker images</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>卸载</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1.卸载依赖</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo yum remove docker-ce docker-ce-cli containerd.io</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 2.删除资源</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo rm -rf /var/lib/docker</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> /var/lib/docker 为docker的默认工作路径</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="国内云镜像加速"><a href="#国内云镜像加速" class="headerlink" title="国内云镜像加速"></a>国内云镜像加速</h2><p>1.登录云找到容器服务</p>
+<p>2.镜像加速器</p>
+<p>3.配置使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo mkdir -p /etc/docker</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo tee /etc/docker/daemon.json &lt;&lt;-<span class="string">&#x27;EOF&#x27;</span></span></span><br><span class="line">&#123;</span><br><span class="line">    &quot;registry-mirrors&quot;: [&quot;https://xxxx.mirror.aliyuncs.com&quot;]</span><br><span class="line">&#125;</span><br><span class="line">EOR</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo systemctl daemon-reload</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo systemctl restart docker</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/26/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-36/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/26/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-36/" class="post-title-link" itemprop="url">打工日记(36)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-11-26 21:41:14 / Modified: 21:48:13" itemprop="dateCreated datePublished" datetime="2020-11-26T21:41:14+08:00">2020-11-26</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>哇！！！！终于挨过试用期了！！可以开始真正嘅工作了！！！入门咗甘耐，虽然提升唔系好高，但系自己的确喺有所收获嘅！接下来就系认真规划之后嘅工作、学习！虽然自己好水，唔知道要唔要再去读研究生，但系如果有机会，我都系想搞好自己嘅学历！！！加油！！一定可以嘅！！不过哩段时间真系懒咗，翻到乜都唔想做，咩都唔想学，之前个段时间做哩个开发嘅嘢，恶补咗一轮嘅flask、uwsgi、docker，喺时候回顾一下，睇下自己到底做咗d咩嘢，唔系嘅话好快又唔记得晒自己搞d咩。总结！！一定要总结！！自己唔叻！但系唔怕！勤能补拙！天道酬勤！！！冲冲冲！！！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/04/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-35/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -617,124 +816,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/15/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-27/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/15/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-27/" class="post-title-link" itemprop="url">打工日记(27)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-09-15 22:22:47 / Modified: 22:30:10" itemprop="dateCreated datePublished" datetime="2020-09-15T22:22:47+08:00">2020-09-15</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>几日冇写了，冇记录自己嘅一个学习状态同心情。先吐槽下星期日去行公园，行咗十几公里，好似傻仔咁，下次唔去d咁弱智嘅活动了。哩两日一直喺度搞个fastdfs，今日成功搭起个单机部署嘅集群了，但系压力测试嘅时候有d问题，只系获得部分嘅结果，不过最后唔使做哩样嘢了，唔系今晚应该都翻唔到来了。接下来嘅工作就系继续完成果个日志采集嘅sdk，下个星期咁上下要搭出来，部署系个视频去重服务上，以后要我地来维护哩个服务了，我觉得开始有意思了，加油！！！一定可以成功嘅，只要坚持，总系有收获嘅！！哩几日觉得自己有所进步，真系开心。我虽然好垃圾，但系总会有一日，我可以变得好强大！加油！！冲！！！我系最强嘅！！！！！</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/11/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-26/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/11/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-26/" class="post-title-link" itemprop="url">打工日记(26)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-09-11 23:14:42 / Modified: 23:21:50" itemprop="dateCreated datePublished" datetime="2020-09-11T23:14:42+08:00">2020-09-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>今日又发现之前几日做嘅嘢系白做嘅，做错嘅。而且之前睇嘅openresty服务嘅嘢又唔记得晒了，搞到好尴尬，唔知自己做咗d咩就一个月了。虽然好似确实有做一d嘢，但系大部分时间都系行弯路，行下行下弯路，然后揾到岩嘅地方，然后再行落去。但系咁嘅方法唔系几好，唔系话唔可以坚持落去，而系咁嘅样效率太低了，根本唔可以高效解决问题。真系知道嘅嘢太少了，想做嘅嘢又太多了。好惊俾人睇小，但系系正常嘅，因为毕竟人地嘅熟练度摆系度，资历老，识嘅嘢肯定系比你多嘅，唔好怕出错，出错先好，尽早错完，尽早掌握。仲系要睇python底层嘅嘢比较好，甘样性能可以有所掌握。仲有发现一个问题，就系自己日头嘅精力冇办法集中，另外一个就系，俾人撞到睇几次手机了，好尴尬。。。。系公司一定要控制住自己，除咗中午休息，其他时候千奇唔好乱睇手机，知道未？？？加油啊！！你要改变自己嘅！！！唔可以一成不变！！唔可以陷入舒适圈！！加油！！！一定得嘅！！！！</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -804,7 +885,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
