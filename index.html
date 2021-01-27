@@ -145,6 +145,75 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/27/Python%E6%BA%90%E7%A0%81%E8%AE%A1%E5%88%92-%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97-logging-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/27/Python%E6%BA%90%E7%A0%81%E8%AE%A1%E5%88%92-%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97-logging-2/" class="post-title-link" itemprop="url">Python源码计划-日志模块-logging(2)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-01-27 22:26:41 / Modified: 22:40:39" itemprop="dateCreated datePublished" datetime="2021-01-27T22:26:41+08:00">2021-01-27</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>1.BufferingFormatter，格式化一系列在缓冲池中的日志<br>linefmt = _defaultFormatter，日志会设置头部和尾部，默认是空的字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">format</span>(<span class="params">self, record</span>):</span></span><br><span class="line">    rv = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> len(records) &gt; <span class="number">0</span>:</span><br><span class="line">        rv = rv + self.formatHeader(records)</span><br><span class="line">        <span class="keyword">for</span> record <span class="keyword">in</span> records:</span><br><span class="line">            rv = rv + self.linefmt.format(record)</span><br><span class="line">        rv = rv + self.formatFooter(records)</span><br><span class="line">    <span class="keyword">return</span> rv</span><br></pre></td></tr></table></figure>
+
+<p>2.Filter classes and functions，过滤规则和过滤器<br>records的长度是否等于0，record.name是否匹配，名字中有无name的字符串，结尾是否为”.”都是作为过滤的规则，然后再用过滤器 Filterer来过滤</p>
+<p>3.Handler就是使用这个过滤器来对日志进行格式化</p>
+<ul>
+<li>1.首先 <strong>init</strong> 会初始化一些东西，_name, level,formatter，句柄会存入到_handlerList中</li>
+<li>2.创建线程锁 createLock，然后还有衍生的两个函数，acquire和release</li>
+<li>3.handle函数<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handler</span>(<span class="params">self, record</span>):</span></span><br><span class="line">    rv = self.filter(record)</span><br><span class="line">    <span class="keyword">if</span> rv:</span><br><span class="line">        self.acquire()</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self.emit(record)</span><br><span class="line">        <span class="keyword">finally</span>:</span><br><span class="line">            self.release()</span><br><span class="line">    <span class="keyword">return</span> rv</span><br></pre></td></tr></table></figure>
+那个emit()的函数一定要由子类实现了，不然的话会抛出一个异常raise NotImplementedError(‘emit must be implemented by Handler subclasses’)</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/26/Python%E6%BA%90%E7%A0%81%E8%AE%A1%E5%88%92-%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97-logging-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -757,70 +826,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/23/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-30/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/23/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-30/" class="post-title-link" itemprop="url">打工日记(30)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-09-23 21:26:00 / Modified: 21:35:33" itemprop="dateCreated datePublished" datetime="2020-09-23T21:26:00+08:00">2020-09-23</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>好似隔咗几日冇记录了，开始懒了。。。。</p>
-<p>早两日喺度学习点样将服务迁移过去公司平台上面，整体嘅流程已经知道点做了，迟d国庆翻来之后将所谓服务都一次性部署上去。今日划水，划咗一日可能，其实应该睇果个视频去重嘅代码嘅，要理解佢嘅框架流程，但系实在喺难d嘅又唔需要掌握，简单嘅基本上都睇过一次了，就系可能自己开始懒，唔想深入挖掘。咁样嘅话死硬了，慢慢进入舒适圈。不过可能系今日比较闲，萌生咗复习高数嘅谂法，已经睇咗一个视频了，不过其实斋睇唔做题嘅话，其实都冇咩用，所以都系要有一个比较好嘅计划先得。我买嘅电子琴到咗了，不过有d失望，有d坑，手感好差，不过平嘢系咁嘅了，又想要牌子，又要质量，鱼与熊掌不可兼得啊！！！唔记得提一下上个星期五去团建，好正，玩咗一个下午，虽然时间唔系好长，但系真系好开心，我觉得哩d先系真正嘅团建，哩d先系我想要嘅嘢！！！不过唔系所有事情都喺符合自己心意嘅，但系可以抓住一个快乐嘅时刻，我觉得真喺几好！！可能接近假期，个心有d浮躁了，要定下心，沉浸喺一件事上面，咁样先有收获！听日唔可以再听住电台做嘢了，效率太低了，根本做唔到嘢。一定要努力啊！！！点都好，要成为一个出色嘅人！先考个研究生先得。。。咳咳咳咳。。。加油！！感受自己嘅努力为生活带来嘅改变！加油！</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -886,7 +895,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">40</span>
+          <span class="site-state-item-count">41</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

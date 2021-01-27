@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="好耐冇写日记了！！！有比较长嘅一段时间系度摸鱼，摸下摸下又一个月了。有d难受哩几日，因为之前嘅嘢冇做好，搞到要修修补补，到处填坑。然后又唔知道自己嘅目标系咩嘢了，有d混吃等死嘅感觉，自己又好似冇咩动力咁。早排仲睇一下docker点用，虽然的确知道一d知识，但系好似又唔系完全掌握住，冇咩信心。真系要努力先得了，哩几日，自己完全不在状态，只可以用时间来弥补自己嘅错，效率又极低，虽然可以完成一d嘢，但系">
+  <meta name="description" content="1.BufferingFormatter，格式化一系列在缓冲池中的日志linefmt &#x3D; _defaultFormatter，日志会设置头部和尾部，默认是空的字符串 12345678def format(self, record):    rv &#x3D; &quot;&quot;    if len(records) &gt; 0:        rv &#x3D; rv + self.formatHeader(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="打工日记(37)">
-<meta property="og:url" content="http://yoursite.com/2021/01/25/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-37/index.html">
+<meta property="og:title" content="Python源码计划-日志模块-logging(2)">
+<meta property="og:url" content="http://yoursite.com/2021/01/27/Python%E6%BA%90%E7%A0%81%E8%AE%A1%E5%88%92-%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97-logging-2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="好耐冇写日记了！！！有比较长嘅一段时间系度摸鱼，摸下摸下又一个月了。有d难受哩几日，因为之前嘅嘢冇做好，搞到要修修补补，到处填坑。然后又唔知道自己嘅目标系咩嘢了，有d混吃等死嘅感觉，自己又好似冇咩动力咁。早排仲睇一下docker点用，虽然的确知道一d知识，但系好似又唔系完全掌握住，冇咩信心。真系要努力先得了，哩几日，自己完全不在状态，只可以用时间来弥补自己嘅错，效率又极低，虽然可以完成一d嘢，但系">
+<meta property="og:description" content="1.BufferingFormatter，格式化一系列在缓冲池中的日志linefmt &#x3D; _defaultFormatter，日志会设置头部和尾部，默认是空的字符串 12345678def format(self, record):    rv &#x3D; &quot;&quot;    if len(records) &gt; 0:        rv &#x3D; rv + self.formatHeader(">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-25T13:58:53.000Z">
-<meta property="article:modified_time" content="2021-01-25T14:16:58.685Z">
+<meta property="article:published_time" content="2021-01-27T14:26:41.000Z">
+<meta property="article:modified_time" content="2021-01-27T14:40:39.527Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2021/01/25/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-37/">
+<link rel="canonical" href="http://yoursite.com/2021/01/27/Python%E6%BA%90%E7%A0%81%E8%AE%A1%E5%88%92-%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97-logging-2/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>打工日记(37) | Hexo</title>
+  <title>Python源码计划-日志模块-logging(2) | Hexo</title>
   
 
 
@@ -150,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/25/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0-37/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/27/Python%E6%BA%90%E7%A0%81%E8%AE%A1%E5%88%92-%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97-logging-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -163,7 +163,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          打工日记(37)
+          Python源码计划-日志模块-logging(2)
         </h1>
 
         <div class="post-meta">
@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-01-25 21:58:53 / Modified: 22:16:58" itemprop="dateCreated datePublished" datetime="2021-01-25T21:58:53+08:00">2021-01-25</time>
+              <time title="Created: 2021-01-27 22:26:41 / Modified: 22:40:39" itemprop="dateCreated datePublished" datetime="2021-01-27T22:26:41+08:00">2021-01-27</time>
             </span>
 
           
@@ -188,8 +188,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>好耐冇写日记了！！！有比较长嘅一段时间系度摸鱼，摸下摸下又一个月了。有d难受哩几日，因为之前嘅嘢冇做好，搞到要修修补补，到处填坑。然后又唔知道自己嘅目标系咩嘢了，有d混吃等死嘅感觉，自己又好似冇咩动力咁。早排仲睇一下docker点用，虽然的确知道一d知识，但系好似又唔系完全掌握住，冇咩信心。真系要努力先得了，哩几日，自己完全不在状态，只可以用时间来弥补自己嘅错，效率又极低，虽然可以完成一d嘢，但系真系觉得自己好菜。感觉自己一无是处，有d浮躁！！的确，真系浮躁，想做嘅嘢太多了，根本冇定下心来沉淀一d嘢，一直不断修补之前嘅错漏，但系自己都冇总结过失败嘅地方。做咩都冇晒动力咁，做咩都觉得好吃力，应该系自己嘅能力唔够了。要好好思考一下自己哩段时间点解咁样，点解冇晒冲劲！真系想做嘅嘢太多了，然后就系得个想，冇付诸行动，冇真正咁去规划一下自己达成目标嘅路线。</p>
-<p>迷茫。</p>
+        <p>1.BufferingFormatter，格式化一系列在缓冲池中的日志<br>linefmt = _defaultFormatter，日志会设置头部和尾部，默认是空的字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">format</span>(<span class="params">self, record</span>):</span></span><br><span class="line">    rv = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> len(records) &gt; <span class="number">0</span>:</span><br><span class="line">        rv = rv + self.formatHeader(records)</span><br><span class="line">        <span class="keyword">for</span> record <span class="keyword">in</span> records:</span><br><span class="line">            rv = rv + self.linefmt.format(record)</span><br><span class="line">        rv = rv + self.formatFooter(records)</span><br><span class="line">    <span class="keyword">return</span> rv</span><br></pre></td></tr></table></figure>
+
+<p>2.Filter classes and functions，过滤规则和过滤器<br>records的长度是否等于0，record.name是否匹配，名字中有无name的字符串，结尾是否为”.”都是作为过滤的规则，然后再用过滤器 Filterer来过滤</p>
+<p>3.Handler就是使用这个过滤器来对日志进行格式化</p>
+<ul>
+<li>1.首先 <strong>init</strong> 会初始化一些东西，_name, level,formatter，句柄会存入到_handlerList中</li>
+<li>2.创建线程锁 createLock，然后还有衍生的两个函数，acquire和release</li>
+<li>3.handle函数<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handler</span>(<span class="params">self, record</span>):</span></span><br><span class="line">    rv = self.filter(record)</span><br><span class="line">    <span class="keyword">if</span> rv:</span><br><span class="line">        self.acquire()</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self.emit(record)</span><br><span class="line">        <span class="keyword">finally</span>:</span><br><span class="line">            self.release()</span><br><span class="line">    <span class="keyword">return</span> rv</span><br></pre></td></tr></table></figure>
+那个emit()的函数一定要由子类实现了，不然的话会抛出一个异常raise NotImplementedError(‘emit must be implemented by Handler subclasses’)</li>
+</ul>
 
     </div>
 
@@ -205,13 +214,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/12/17/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="">
-      <i class="fa fa-chevron-left"></i> 
+    <a href="/2021/01/26/Python%E6%BA%90%E7%A0%81%E8%AE%A1%E5%88%92-%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97-logging-1/" rel="prev" title="Python源码计划-日志模块(logging)(1)">
+      <i class="fa fa-chevron-left"></i> Python源码计划-日志模块(logging)(1)
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/01/26/Python%E6%BA%90%E7%A0%81%E8%AE%A1%E5%88%92-%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97-logging-1/" rel="next" title="Python源码计划-日志模块(logging)(1)">
-      Python源码计划-日志模块(logging)(1) <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
